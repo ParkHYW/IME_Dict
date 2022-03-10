@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'imeApp',
-    'embed_video',
     'import_export',
 ]
 
