@@ -14,3 +14,11 @@ class Analytics(models.Model):
 
     def __str__(self):
         return self.term
+
+class Anthropometry(models.Model):
+    term = models.CharField(max_length=200)
+    meaning = models.TextField()
+
+    def __str__(self):
+        return self.term
+

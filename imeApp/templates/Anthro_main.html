@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
-			</style>
+		</style>
   </head>
   <body class="is-preload">
 			
@@ -23,7 +23,7 @@
 			<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<h1>IME Dictionary</h1>
+					<h1>IME -Dictionary</h1>
 				</div>
 			</header>
 			<!-- Section -->
@@ -37,22 +37,16 @@
 			</section>
 			<section>
 				<div>
-					<!--메인-->
-					{% for i in companys.all %}
-						<p>
-								<a href="{% url 'detail'  i.id %}">{{i.term}}</a>
-						</p>	
+					{% for i in analytics.all %}
+					<p>
+							<a href="{% url 'analytics'  i.id %}">{{i.term}}</a>
+					</p>	
 					{% endfor %}
 			
 				</div>
 			</section>
 
 		  </div>
-  
-
-	
-		
-		
 		</div>
 	</div>
 	  <!-- Scripts -->

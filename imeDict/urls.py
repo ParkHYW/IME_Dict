@@ -24,6 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name="main"),
     path('detail/<int:id>/', detail, name="detail"),
+    path('analytics', analytic, name="analytic"), # analytics
+    path('analytics/<int:id>/', analytics, name="analytics"), #
+    path('Anthropometry', myAnthropometry, name="Anthropometry"), # Anthropometry
+    path('Anthropometrys/<int:id>/', myAnthropometrys, name="Anthropometrys"), #
 ]
 urlpatterns += \
     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
