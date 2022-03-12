@@ -37,9 +37,12 @@
 			</section>
 			<section>
 				<div>
-					<!--메인-->
-					<a href="{% url 'analytic' %}">Analytics</a>
-					<a href="{% url 'Anthropometry' %}">Anthropometry</a> 
+					{% for i in analytics.all %}
+					<p>
+							<a href="{% url 'analytics'  i.id %}">{{i.term}}</a>
+					</p>	
+					{% endfor %}
+			
 				</div>
 			</section>
 

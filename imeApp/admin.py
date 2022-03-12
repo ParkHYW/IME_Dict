@@ -14,3 +14,8 @@ class AnalyticsAdmin(ImportExportMixin, admin.ModelAdmin):
     pass
 
 admin.site.register(Analytics, CompanyAdmin)
+
+class AnthropometryAdmin(ImportExportMixin, admin.ModelAdmin):
+    pass
+
+admin.site.register(Anthropometry, AnthropometryAdmin)
