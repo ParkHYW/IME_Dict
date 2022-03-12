@@ -38,9 +38,70 @@
 			<section>
 				<div>
 					<!--메인-->
-					<a href="{% url 'analytic' %}">Analytics</a>
-					<a href="{% url 'Anthropometry' %}">Anthropometry</a> 
+					<p>
+						<a href="{% url 'analytic' %}">Analytical Techniques & Operations Research
+							
+	
+							</a>
+					</p>
+					<p>
+						<a href="{% url 'Anthropometry' %}">Anthropometry & Biomechanics</a>
+					</p>
+					<p>
+						<a href="{% url 'Computer' %}">Computer & Information Systems</a> 
+					</p>
+					<p>
+						<a href="{% url 'Cost' %}">Cost Engineering & Project Management</a> 
+					</p>
+					<p>
+						<a href="{% url 'Distribution' %}">Distribution & Marketing</a> 
+					</p>
+					<p>
+						<a href="{% url 'Employee' %}">Employee & Industrial Relations
+							
+							</a> 
+					</p>
+					<p>
+						<a href="{% url 'Engineering' %}">Engineering Economy</a> 
+					</p>
+					<p>
+						<a href="{% url 'Facility' %}">Facility Planning & Design</a> 
+					</p>
+					<p>
+						<a href="{% url 'Human' %}">Human Factors (Ergonomics) Engineering</a> 
+					</p>
+					<p>
+						<a href="{% url 'Management' %}">Management</a> 
+					</p>
+					<p>
+						<a href="{% url 'Manufacturing' %}">Manufacturing Systems</a> 
+					</p>
+					<p>
+						<a href="{% url 'Material' %}">Materials Processing
+							</a> 
+					</p>
+					<p>
+						<a href="{% url 'Occupational' %}">Occupational Health & Safety</a> 
+					</p>
+					<p>
+						<a href="{% url 'Operation' %}">Operations & Inventory Planning & Control</a>
+					</p>
+					<p>
+						<a href="{% url 'Organization' %}">Organization Planning and Theory</a> 
+					</p>
+					<p>
+						<a href="{% url 'Quality' %}">Quality Assurance & Reliability</a> 
+					</p>
+					<p>
+						<a href="{% url 'Work' %}">Work Design and Measurement</a> 
+					</p>
+
 				</div>
+				{% for i in companys.all %}
+				<p>
+						<a href="{% url 'detail'  i.id %}">{{i.term}}</a>
+				</p>	
+			   {% endfor %}
 			</section>
 
 		  </div>

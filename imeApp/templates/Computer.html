@@ -1,0 +1,68 @@
+{% load static %}
+	
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analytics</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+			</style>
+  </head>
+  <body class="is-preload">
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+		  <div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<a href="{% url 'main' %}">
+					<h1>IME Dictionary</h1>
+				</a>
+			</header>
+  
+			<!-- Section -->
+			
+			<section>
+			  <header class="major">
+				<h2> &#10002;&#65039;{{term}}</h2>
+			  </header>
+			  <div class="card-title">{{meaning}}</div>
+			</section>
+			<!-- Section -->
+			<section>
+				<header class="major">
+				  <h2> &#10002;&#65039; MORE</h2>
+				</header>
+				<div class="card-title"></div>
+			</section>
+			<!-- Section -->
+			<section>
+				<header class="major">
+				  <h2> &#128248; VIDEO</h2>
+				</header>
+				<div class="card-title">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/86gToHFkbiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</section>
+		  </div>
+		</div>
+  
+
+	  </div>
+	  <!-- Scripts -->
+	  <script src="static/js/jquery.min.js"></script>
+	  <script src="static/js/browser.min.js"></script>
+	  <script src="static/js/breakpoints.min.js"></script>
+	  <script src="static/js/util.js"></script>
+	  <script src="static/js/main.js"></script>
+	</body>
+  </html>
