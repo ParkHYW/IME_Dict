@@ -1,0 +1,60 @@
+{% load static %}	
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IME</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+		</style>
+  </head>
+  <body class="is-preload">
+			
+    <!-- Wrapper -->
+    
+		<!-- Main -->
+		<div id="main">
+		  <div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<h1>IME Dictionary</h1>
+				</div>
+			</header>
+			<!-- Section -->
+			<section>
+				<form>
+					<div>
+					  <input type="search" id="mySearch" name="q" class="mybtn">
+					  <button class="mybtn">Search</button>
+					</div>
+				</form>
+			</section>
+			<section>
+				<div>
+					{% for i in analytics.all %}
+					<p>
+							<a href="{% url 'Engineerings'  i.id %}">{{i.term}}</a>
+					</p>	
+					{% endfor %}
+			
+				</div>
+			</section>
+
+		  </div>
+		</div>
+	</div>
+	  <!-- Scripts -->
+	  <script src="{% static 'js/jquery.min.js' %}"></script>
+	  <script src="{% static 'js/browser.min.js' %}"></script>
+	  <script src="{% static 'js/breakpoints.min.js' %}"></script>
+	  <script src="{% static 'js/util.js' %}"></script>
+	  <script src="{% static 'js/main.js' %}"></script>
+	</body>
+  </html>
+
