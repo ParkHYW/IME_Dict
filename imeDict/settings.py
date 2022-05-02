@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'imeApp',
     'import_export',
+    'search',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'imeDict.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'imeDict', 'templates/'),os.path.join(BASE_DIR,'search','templates/')] #검색엔진
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
